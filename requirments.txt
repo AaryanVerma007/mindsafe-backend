@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+transformers==4.35.2
+tensorflow==2.15.0
+numpy

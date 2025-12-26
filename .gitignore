@@ -1,0 +1,6 @@
+# Ignore ML models
+model/
+*.h5
+*.bin
+*.pt
+*.onnx

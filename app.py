@@ -1,13 +1,15 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from transformers import BertTokenizer, TFBertForSequenceClassification
+# from transformers import BertTokenizer, TFBertForSequenceClassification
 import numpy as np
 
 # ---------- LOAD MODEL ----------
-MODEL_PATH = "model/bert_model"
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-tokenizer = BertTokenizer.from_pretrained(MODEL_PATH)
-model = TFBertForSequenceClassification.from_pretrained(MODEL_PATH)
+MODEL_NAME = "distilbert-base-uncased-finetuned-sst-2-english"
+
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 
 # ---------- FASTAPI ----------
 app = FastAPI()

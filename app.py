@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from transformers import BertTokenizer, TFBertForSequenceClassification
-import tensorflow as tf
 import numpy as np
 
 # ---------- LOAD MODEL ----------
